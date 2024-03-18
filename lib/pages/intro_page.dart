@@ -32,7 +32,11 @@ class IntroPage extends StatelessWidget {
 
             //Logo de la compania
             //La imagen al colocarse tambien ayuda a centrar el nombre de la compania
-            Image.asset('lib/images/salmon_eggs.png'),
+            Padding(
+              //Definiendo el padding de la imagen
+              padding: const EdgeInsets.all(50.0),
+              child: Image.asset('lib/images/salmon_eggs.png'),
+            ),
 
         
             //Titulo
