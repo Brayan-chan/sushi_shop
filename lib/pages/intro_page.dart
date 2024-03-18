@@ -13,6 +13,8 @@ class IntroPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
+          //Alineando el nombre de la compania a la izquierda
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 25),
         
