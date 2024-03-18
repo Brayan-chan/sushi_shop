@@ -39,11 +39,26 @@ class IntroPage extends StatelessWidget {
               padding: const EdgeInsets.all(50.0),
               child: Image.asset('lib/images/salmon_eggs.png'),
             ),
+            
+            //Siempre recuerda asignar un tamaño al espacio que ocuparemos
+            const SizedBox(height: 25),
 
-        
             //Titulo
+            Text(
+              "THE TASTE OF JAPANESE FOOD",
+              style: GoogleFonts.dmSerifDisplay(
+                //Definiendo el tamaño de la letra
+                fontSize: 44,
+
+                //Definiendo el color de la letra
+                color: Colors.white,
+              ),
+            ),
         
+            const SizedBox(height: 10),
+
             //Subtitulo
+            
         
             //Boton Iniciar o Get Started
         
