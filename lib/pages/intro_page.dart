@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sushi_shop/components/button.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -15,6 +16,8 @@ class IntroPage extends StatelessWidget {
         child: Column(
           //Alineando el nombre de la compania a la izquierda
           crossAxisAlignment: CrossAxisAlignment.start,
+          //Alineando el contenido, ocupando todo el espacio
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const SizedBox(height: 25),
         
@@ -71,7 +74,7 @@ class IntroPage extends StatelessWidget {
             const SizedBox(height: 25),
 
             //Boton Iniciar o Get Started
-        
+            MyButton(text: "Get Started")
           ],
         ),
       ),
