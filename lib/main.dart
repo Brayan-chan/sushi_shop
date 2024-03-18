@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushi_shop/pages/menu_page.dart';
 import 'pages/intro_page.dart';
 
 void main() {
@@ -13,6 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
        debugShowCheckedModeBanner: false,
         home: IntroPage(),
+        //Creando las rutas a las que podemos navegar
+        routes: {
+          '/intropage' : (context) => const IntroPage(),
+          '/menupage' : (context) => const MenuPage(),
+        }
     ); 
   }
 }
