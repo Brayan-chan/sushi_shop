@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sushi_shop/components/button.dart';
+import 'package:sushi_shop/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -42,11 +44,30 @@ class _MenuPageState extends State<MenuPage> {
         children: [
           //Banner de promociones
           Container(
+            //PrimaryColor es un componente para asignar colores
+            //Se le asigna un borde de 20 pixeles
+            decoration: BoxDecoration(color: primaryColor, borderRadius: BorderRadius.circular(20)),
+            //Definiendo el margen
+            //EdgeInsts sirve para definir el margen del contenedor
+            margin: const EdgeInsets.symmetric(horizontal: 25),
+            //Definiendo el padding
+            //Definiendo te tamanio del contenedor
+            padding: const EdgeInsets.all(25),
             //Creando un contenedor para el banner
             child: Row(
               children: [
-                Text('Get 32% Promo'),
-                
+                Column(
+                  children: [
+                    //Texto de promoción
+                    const Text('Get 32% Promo'),
+
+                    //Boton de promoción
+                    MyButton(
+                      text: 'Get it now',
+                      onTap: (){}
+                    ),
+                  ],
+                )
               ],
             ),
           ),
