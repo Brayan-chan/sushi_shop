@@ -18,6 +18,9 @@ class _MenuPageState extends State<MenuPage> {
       //Parte superior de la ventana
       //Asignando un menu de amburguesa
       appBar: AppBar(
+
+        //Centertitle para centrar el texto dentro del appbar
+        centerTitle: true,
         //Asignando un color al menu
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -32,6 +35,22 @@ class _MenuPageState extends State<MenuPage> {
           //Asignando un color al titulo
           style: TextStyle(color: Colors.grey[900]),
         ),
+      ),
+      //Creando el contenido de la pagina
+
+      body: Column(
+        children: [
+          //Banner de promociones
+
+
+          //Buscador de productos
+
+
+          //Listado de productos
+
+
+          //Comida popular
+        ],
       ),
     );
   }
