@@ -148,6 +148,9 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
+          //Definiendo el margen de la seccion
+          const SizedBox(height: 10),
+
           //Comida popular
         ],
       ),
