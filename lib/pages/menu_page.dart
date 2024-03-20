@@ -42,6 +42,8 @@ class _MenuPageState extends State<MenuPage> {
       //Creando el contenido de la pagina
 
       body: Column(
+        //Alineando al inicio para que el texto 'Food Menu' se acomode al inicio
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           //Banner de promociones
           Container(
@@ -132,7 +134,19 @@ class _MenuPageState extends State<MenuPage> {
           const SizedBox(height: 25),
 
           //Listado de productos
-
+          //Asignando un padding para manejar el margen
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              'Food Menu',
+              //Definiendo estilos para el texto
+               style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.grey[800],
+                fontSize: 18,
+              ),
+            ),
+          ),
 
           //Comida popular
         ],
