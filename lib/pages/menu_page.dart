@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_shop/components/button.dart';
 import 'package:sushi_shop/theme/colors.dart';
 
@@ -59,7 +60,16 @@ class _MenuPageState extends State<MenuPage> {
                 Column(
                   children: [
                     //Texto de promoción
-                    const Text('Get 32% Promo'),
+                    //Dandole estilos al texto
+                    Text(
+                      'Get 32% Promo',
+                      style: GoogleFonts.dmSerifDisplay(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+
+                    const SizedBox(height: 20),
 
                     //Boton de promoción
                     MyButton(
@@ -67,7 +77,13 @@ class _MenuPageState extends State<MenuPage> {
                       onTap: (){}
                     ),
                   ],
-                )
+                ),
+
+                //Imagen de promocion
+                Image.asset(
+                  'lib/images/many-sushi.png',
+                  height: 100,
+                ),
               ],
             ),
           ),
