@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_shop/components/button.dart';
+import 'package:sushi_shop/models/food.dart';
 import 'package:sushi_shop/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -11,6 +12,28 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
+
+  //Lista de alimentos
+  List foodMenu = [
+    //Hacemos uso de la clase Food 
+    //salmon sushi
+    Food(
+      name: 'Salmon Sushi',
+      price: '21.00',
+      imagePath: 'lib/images/salmon_sushi.png',
+      rating: '4.9'
+    ),
+
+
+    //tuna
+    Food(
+      name: 'Tuna',
+      price: '23.00',
+      imagePath: 'lib/images/tuna.png',
+      rating: '4.3'
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     //Scaffold sirve para crear una pantalla vacia
