@@ -100,10 +100,36 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
+          //Definiendo el margen de la seccion
           const SizedBox(height: 25),
 
           //Buscador de productos
-          
+          //TextField sirve para crear un contenedor de texto
+          //Se asigna un pading symetrico para que se aplique de ambos lados
+          Padding(
+            //Con este pading se define que el contenedor de texto quedara en el centro
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: TextField(
+              //InputDecoration sirve para darle estilos a los inputs
+              //OutlineInputBorder sirve para darle un borde al input
+              decoration: InputDecoration(
+                //FocusedBorder sirve para darle un borde al input cuando este seleccionado
+                //Es decir por defecto al seleccionar el textfield el borde se tonara en negro
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //C
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(20),
+                )
+              ),
+            ),
+          ),
+
+          //Definiendo el margen de la seccion
+          const SizedBox(height: 25),
 
           //Listado de productos
 
