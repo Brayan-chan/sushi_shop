@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi_shop/components/button.dart';
+import 'package:sushi_shop/components/food_tile.dart';
 import 'package:sushi_shop/models/food.dart';
 import 'package:sushi_shop/theme/colors.dart';
 
@@ -173,6 +174,29 @@ class _MenuPageState extends State<MenuPage> {
 
           //Definiendo el margen de la seccion
           const SizedBox(height: 10),
+
+          //Se crea el componente FoodTile
+          //Expanded es para hacer que el componente se adapte a la pantalla
+          Expanded(
+            //Asignando un padding para manejar el margen
+            child: Padding(
+              //EdgeInsts sirve para definir el margen del contenedor
+              //only left sirve para definir el margen izquierdo
+              padding: const EdgeInsets.only(left: 25.0),
+              //ListView.builder sirve para crear una lista de elementos
+              child: ListView.builder(
+                //scrollDirection sirve para definir la direccion de desplazamiento de la lista de elementos
+                scrollDirection: Axis.horizontal,
+                //Se crea el contador de las posiciones de la lista
+                itemCount: foodMenu.length,
+                //itemBuilder sirve para crear los elementos de la lista
+                //index sirve para manejar el indice de los elementos
+                itemBuilder: (context, index) => FoodTile(
+                  food: foodMenu[index],
+                ),
+              ),
+            ),
+          ),
 
           //Comida popular
         ],
