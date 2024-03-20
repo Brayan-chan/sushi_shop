@@ -26,6 +26,9 @@ class FoodTile extends StatelessWidget {
       child: Column (
         //Se utiliza crossAxisAlignment para alinear el texto de forma vertical
         crossAxisAlignment: CrossAxisAlignment.start,
+        //Se utiliza mainAxisAlignment para alinear el texto de forma horizontal
+        //SpaceEvenly sirve para separar los elementos de forma equitativa
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         //Se utiliza children para agregar elementos dentro del contenedor
         children: [
           //Asignando una imagen con la clase Food
