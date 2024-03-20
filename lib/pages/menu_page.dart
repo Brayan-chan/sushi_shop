@@ -53,11 +53,23 @@ class _MenuPageState extends State<MenuPage> {
             margin: const EdgeInsets.symmetric(horizontal: 25),
             //Definiendo el padding
             //Definiendo te tamanio del contenedor
-            padding: const EdgeInsets.all(25),
+            //Utilizamos symmetric para darle el mismo margen a todos los lados
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
             //Creando un contenedor para el banner
             child: Row(
+              //Definiendo el tamanio del contenedor
+              //EdgeInsts sirve para definir el margen del contenedor
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //Podemos utilizar igual spaceBetween o spaceAround
+              //spaceAround distribuye el espacio equitativamente
+              //spaceEvenly distribuye el espacio equitativamente
+
               children: [
                 Column(
+                  //Definiendo el tamanio del contenedor
+                  //EdgeInsts sirve para definir el margen del contenedor
+                  crossAxisAlignment: CrossAxisAlignment.start,
+
                   children: [
                     //Texto de promoción
                     //Dandole estilos al texto
@@ -88,8 +100,10 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
-          //Buscador de productos
+          const SizedBox(height: 25),
 
+          //Buscador de productos
+          
 
           //Listado de productos
 
