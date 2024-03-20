@@ -20,8 +20,12 @@ class FoodTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       //Asignando el margen de separacion entre contenedores desde la clase 
-      margin: EdgeInsets.only(left: 25),
+      margin: const EdgeInsets.only(left: 25),
+      //Asignando un padding all para hacer mas grande los contenedores
+      padding: const EdgeInsets.all(25),
       child: Column (
+        //Se utiliza crossAxisAlignment para alinear el texto de forma vertical
+        crossAxisAlignment: CrossAxisAlignment.start,
         //Se utiliza children para agregar elementos dentro del contenedor
         children: [
           //Asignando una imagen con la clase Food
@@ -42,16 +46,36 @@ class FoodTile extends StatelessWidget {
             width: 160,
             //Child row es para agregar contenido a la celda de la lista de productos 
             child: Row(
+              //Se utiliza mainAxisAlignment para alinear el texto de forma horizontal
+              //se utiliza spaceBetween para separar los elementos de forma equitativa
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 
                 //price
                 //Se concatena el simbolo $ con el precio de los productos
-                Text('\$' + food.price),
+                Text(
+                  '\$' + food.price,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[700],
+                  ),
+                ),
 
                 //rating
                 //Utilizamos el icono star para mostrar el rating
-                Icon(Icons.star),
-                Text(food.rating),
+                //Se utiliza Row para agregar contenido en fila al contenedor 
+                Row (
+                  children: [
+                    Icon (
+                      Icons.star,
+                      color: Colors.yellow[800],
+                    ),
+                    Text (
+                      food.rating,
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ],
+                )
               ],
             ),
           )

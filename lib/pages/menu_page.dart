@@ -179,24 +179,22 @@ class _MenuPageState extends State<MenuPage> {
           //Expanded es para hacer que el componente se adapte a la pantalla
           Expanded(
             //Asignando un padding para manejar el margen
-            child: Padding(
-              //EdgeInsts sirve para definir el margen del contenedor
-              //only left sirve para definir el margen izquierdo
-              padding: const EdgeInsets.only(left: 25.0),
-              //ListView.builder sirve para crear una lista de elementos
-              child: ListView.builder(
-                //scrollDirection sirve para definir la direccion de desplazamiento de la lista de elementos
-                scrollDirection: Axis.horizontal,
-                //Se crea el contador de las posiciones de la lista
-                itemCount: foodMenu.length,
-                //itemBuilder sirve para crear los elementos de la lista
-                //index sirve para manejar el indice de los elementos
-                itemBuilder: (context, index) => FoodTile(
-                  food: foodMenu[index],
-                ),
+            //Se removio el padding ya que no es necesario
+            child: ListView.builder(
+              //scrollDirection sirve para definir la direccion de desplazamiento de la lista de elementos
+              scrollDirection: Axis.horizontal,
+              //Se crea el contador de las posiciones de la lista
+              itemCount: foodMenu.length,
+              //itemBuilder sirve para crear los elementos de la lista
+              //index sirve para manejar el indice de los elementos
+              itemBuilder: (context, index) => FoodTile(
+                food: foodMenu[index],
               ),
             ),
           ),
+
+          //Definiendo el margen de la seccion
+          const SizedBox(height: 25),
 
           //Comida popular
         ],
