@@ -6,7 +6,7 @@ import 'package:sushi_shop/models/food.dart';
 import 'package:sushi_shop/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
-  const MenuPage({Key? key});
+  const MenuPage({super.key});
 
   @override
   State<MenuPage> createState() => _MenuPageState();
@@ -31,6 +31,9 @@ class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //resizeToAvoidBottomInset: false,
+      //Solucion de excepcion renderflex overflow on bottom
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         centerTitle: true,
